@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const API_BASE = '/api';
+const API_BASE = 'https://smart-job-placement-api.onrender.com/api';
 
 const initialCandidateForm = {
   name: '',
