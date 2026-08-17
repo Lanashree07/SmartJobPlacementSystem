@@ -112,7 +112,7 @@ SmartJobPlacementSystem/
 
 ### ⚙️ Getting Started
 
-1. Clone the Repository
+Clone the Repository
 
 git clone https://github.com/Lanashree07/SmartJobPlacementSystem.git
 
@@ -348,51 +348,34 @@ https://smart-job-placement-api.onrender.com
 
 ### 🔗 Important Links
 
-Resource	Link
+| Resource             | Link                                                                              |
+| -------------------- | --------------------------------------------------------------------------------- |
+| 🌐 Live Application  | [Smart Job Placement System](https://smart-job-placement-system.vercel.app)       |
+| ⚙️ Backend API       | [Smart Job Placement API](https://smart-job-placement-api.onrender.com)           |
+| 💻 GitHub Repository | [SmartJobPlacementSystem](https://github.com/Lanashree07/SmartJobPlacementSystem) |
+| 👩‍💻 GitHub Profile | [Lanashree07](https://github.com/Lanashree07)                                     |
+| 💼 LinkedIn Profile  | [Lana Shree Ganesan](https://www.linkedin.com/in/lana-shree-ganesan/)             |
 
-🌐 Live Application	https://smart-job-placement-system.vercel.app
-
-⚙️ Backend API	https://smart-job-placement-api.onrender.com
-
-💻 GitHub Repository	https://github.com/Lanashree07/SmartJobPlacementSystem
-
-👩‍💻 GitHub Profile	https://github.com/Lanashree07
-
-💼 LinkedIn Profile	https://www.linkedin.com/in/lana-shree-ganesan/
 
 ---
 
 ### 📋 Example Workflow
 
-1. Open the Smart Job Placement System
-
+Open Smart Job Placement System
               ↓
-
-2. View the recruitment dashboard
-
+View Recruitment Dashboard
               ↓
-
-3. Add candidate details
-
+Add Candidate Details
               ↓
-
-4. Track candidate status and score
-
+Track Candidate Status & Score
               ↓
-
-5. Add available job opportunities
-
+Add Available Job Opportunities
               ↓
-
-6. Track applicants
-
+Track Applicants
               ↓
-
-7. Add successful placement details
-
+Add Successful Placement Details
               ↓
-
-8. View placement information
+View Placement Information
 
 ---
 
@@ -423,13 +406,11 @@ Mobile-sized screens
 
 ### 🚀 Production URLs
 
-Frontend
+| Service     | URL                                                                                            |
+| ----------- | ---------------------------------------------------------------------------------------------- |
+| 🌐 Frontend | [https://smart-job-placement-system.vercel.app](https://smart-job-placement-system.vercel.app) |
+| ⚙️ Backend  | [https://smart-job-placement-api.onrender.com](https://smart-job-placement-api.onrender.com)   |
 
-https://smart-job-placement-system.vercel.app
-
-Backend
-
-https://smart-job-placement-api.onrender.com
 
 ---
 
