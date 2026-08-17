@@ -5,11 +5,21 @@ const db = require('./db');
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
+/* -------------------- HEALTH CHECK -------------------- */
+
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Smart Job Placement API is running successfully 🚀'
+  });
+});
+
 /* -------------------- CANDIDATES -------------------- */
 
+// Get all candidates
 app.get('/api/candidates', (req, res) => {
   const candidates = db
     .prepare('SELECT * FROM candidates ORDER BY id DESC')
@@ -18,6 +28,7 @@ app.get('/api/candidates', (req, res) => {
   res.json(candidates);
 });
 
+// Add a candidate
 app.post('/api/candidates', (req, res) => {
   const {
     name,
@@ -35,19 +46,21 @@ app.post('/api/candidates', (req, res) => {
     });
   }
 
-  const result = db.prepare(`
-    INSERT INTO candidates
-    (name, role, email, experience, score, status, interviewDate)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
-  `).run(
-    name,
-    role,
-    email,
-    experience,
-    Number(score) || 0,
-    status || 'Applied',
-    interviewDate || ''
-  );
+  const result = db
+    .prepare(`
+      INSERT INTO candidates
+      (name, role, email, experience, score, status, interviewDate)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `)
+    .run(
+      name,
+      role,
+      email,
+      experience,
+      Number(score) || 0,
+      status || 'Applied',
+      interviewDate || ''
+    );
 
   const newCandidate = db
     .prepare('SELECT * FROM candidates WHERE id = ?')
@@ -56,6 +69,7 @@ app.post('/api/candidates', (req, res) => {
   res.status(201).json(newCandidate);
 });
 
+// Update a candidate
 app.put('/api/candidates/:id', (req, res) => {
   const id = Number(req.params.id);
 
@@ -102,6 +116,7 @@ app.put('/api/candidates/:id', (req, res) => {
   res.json(candidate);
 });
 
+// Delete a candidate
 app.delete('/api/candidates/:id', (req, res) => {
   const id = Number(req.params.id);
 
@@ -125,6 +140,7 @@ app.delete('/api/candidates/:id', (req, res) => {
 
 /* -------------------- JOBS -------------------- */
 
+// Get all jobs
 app.get('/api/jobs', (req, res) => {
   const jobs = db
     .prepare('SELECT * FROM jobs ORDER BY id DESC')
@@ -137,6 +153,7 @@ app.get('/api/jobs', (req, res) => {
   res.json(jobs);
 });
 
+// Add a job
 app.post('/api/jobs', (req, res) => {
   const {
     title,
@@ -153,18 +170,20 @@ app.post('/api/jobs', (req, res) => {
     });
   }
 
-  const result = db.prepare(`
-    INSERT INTO jobs
-    (title, company, location, type, applicants, filled)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `).run(
-    title,
-    company,
-    location,
-    type || 'Full-time',
-    Number(applicants) || 0,
-    filled ? 1 : 0
-  );
+  const result = db
+    .prepare(`
+      INSERT INTO jobs
+      (title, company, location, type, applicants, filled)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `)
+    .run(
+      title,
+      company,
+      location,
+      type || 'Full-time',
+      Number(applicants) || 0,
+      filled ? 1 : 0
+    );
 
   const newJob = db
     .prepare('SELECT * FROM jobs WHERE id = ?')
@@ -177,6 +196,7 @@ app.post('/api/jobs', (req, res) => {
 
 /* -------------------- PLACEMENTS -------------------- */
 
+// Get all placements
 app.get('/api/placements', (req, res) => {
   const placements = db
     .prepare('SELECT * FROM placements ORDER BY id DESC')
@@ -185,6 +205,7 @@ app.get('/api/placements', (req, res) => {
   res.json(placements);
 });
 
+// Add a placement
 app.post('/api/placements', (req, res) => {
   const {
     candidate,
@@ -200,17 +221,19 @@ app.post('/api/placements', (req, res) => {
     });
   }
 
-  const result = db.prepare(`
-    INSERT INTO placements
-    (candidate, role, company, salary, startDate)
-    VALUES (?, ?, ?, ?, ?)
-  `).run(
-    candidate,
-    role,
-    company,
-    salary,
-    startDate
-  );
+  const result = db
+    .prepare(`
+      INSERT INTO placements
+      (candidate, role, company, salary, startDate)
+      VALUES (?, ?, ?, ?, ?)
+    `)
+    .run(
+      candidate,
+      role,
+      company,
+      salary,
+      startDate
+    );
 
   const newPlacement = db
     .prepare('SELECT * FROM placements WHERE id = ?')
@@ -221,6 +244,7 @@ app.post('/api/placements', (req, res) => {
 
 /* -------------------- OVERVIEW -------------------- */
 
+// Dashboard overview
 app.get('/api/overview', (req, res) => {
   const totalCandidates = db
     .prepare('SELECT COUNT(*) AS count FROM candidates')
@@ -264,6 +288,6 @@ app.get('/api/overview', (req, res) => {
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(
-    `Smart Job Placement Server running on http://localhost:${PORT}`
+    `Smart Job Placement Server running on port ${PORT}`
   );
 });
