@@ -108,6 +108,8 @@ SmartJobPlacementSystem/
 ├── package-lock.json
 └── README.md
 
+---
+
 ### ⚙️ Getting Started
 
 1. Clone the Repository
@@ -117,6 +119,8 @@ git clone https://github.com/Lanashree07/SmartJobPlacementSystem.git
 Move into the project directory:
 
 cd SmartJobPlacementSystem
+
+---
 
 ### 🖥️ Backend Setup
 
@@ -140,6 +144,8 @@ The API base URL is:
 
 http://localhost:5001/api
 
+---
+
 ### 💻 Frontend Setup
 
 Open a new terminal.
@@ -160,6 +166,8 @@ The frontend will run at:
 
 http://localhost:5173
 
+---
+
 ### 📡 API Endpoints
 
 ### Overview
@@ -173,6 +181,8 @@ Interviews scheduled
 Active jobs
 Placements
 Placement rate
+
+---
 
 ### Candidates
 
@@ -192,6 +202,8 @@ Delete a candidate:
 
 DELETE /api/candidates/:id
 
+---
+
 ### Jobs
 
 Get all jobs:
@@ -202,6 +214,8 @@ Add a job:
 
 POST /api/jobs
 
+---
+
 ### Placements
 
 Get all placements:
@@ -211,6 +225,8 @@ GET /api/placements
 Add a placement:
 
 POST /api/placements
+
+---
 
 ### 👨‍💼 Candidate Management
 
@@ -232,6 +248,8 @@ Shortlisted
 Interviewing
 Offered
 
+---
+
 ### 💼 Job Management
 
 The Open Positions section allows users to manually add job opportunities.
@@ -245,6 +263,8 @@ Employment Type
 Number of Applicants
 Filled/Open Status
 
+---
+
 ### 🎯 Placement Management
 
 The Successful Placements section allows users to manually record candidates who have been placed.
@@ -256,6 +276,8 @@ Role
 Company
 Salary
 Start Date
+
+---
 
 ### 📊 Dashboard
 
@@ -274,6 +296,8 @@ The dashboard also displays:
 Candidate Pipeline
 Open Positions
 Successful Placements
+
+---
 
 ### 🔄 Application Architecture
 
@@ -300,6 +324,8 @@ Successful Placements
                     │         Database            │
                     └────────────────────────────┘
 
+---                    
+
 ### 🌐 Deployment
 
 Frontend Deployment
@@ -318,6 +344,8 @@ Backend API:
 
 https://smart-job-placement-api.onrender.com
 
+---
+
 ### 🔗 Important Links
 
 Resource	Link
@@ -331,6 +359,8 @@ Resource	Link
 👩‍💻 GitHub Profile	https://github.com/Lanashree07
 
 💼 LinkedIn Profile	https://www.linkedin.com/in/lana-shree-ganesan/
+
+---
 
 ### 📋 Example Workflow
 
@@ -361,8 +391,10 @@ Resource	Link
 7. Add successful placement details
 
               ↓
-              
+
 8. View placement information
+
+---
 
 ### 🔐 Data Management
 
@@ -373,6 +405,8 @@ Jobs
 Placements
 
 The Express server exposes REST API endpoints that allow the React frontend to communicate with the database.
+
+---
 
 ### 📱 Responsive Design
 
@@ -385,6 +419,8 @@ Laptop screens
 Tablet screens
 Mobile-sized screens
 
+---
+
 ### 🚀 Production URLs
 
 Frontend
@@ -394,6 +430,8 @@ https://smart-job-placement-system.vercel.app
 Backend
 
 https://smart-job-placement-api.onrender.com
+
+---
 
 ### 👩‍💻 Author
 
@@ -407,9 +445,13 @@ LinkedIn
 
 https://www.linkedin.com/in/lana-shree-ganesan/
 
+---
+
 ### ⭐ Project
 
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+---
 
 ### 📄 License
 
