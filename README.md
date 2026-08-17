@@ -1,91 +1,62 @@
-# 🚀 Smart Job Placement & Recruitment Management System
+# 🎯 Smart Job Placement & Recruitment Management System
 
-A full-stack web application built with React, Vite, Node.js, Express, and SQLite for managing candidates, job opportunities, interviews, and successful placements through a centralized recruitment dashboard.
+A full-stack web application designed to simplify and manage the complete campus placement and recruitment process. The system provides separate functionalities for students, recruiters, and administrators to manage job opportunities, applications, recruitment activities, and placement records.
 
----
+## 🌐 Live Demo
 
-## 🌐 Live Project
+* **Frontend:** https://smart-job-placement-system.vercel.app
+* **Backend API:** https://smart-job-placement-api.onrender.com
+* **GitHub Repository:** https://github.com/Lanashree07/SmartJobPlacementSystem
 
-### 🔗 Live Application
-https://smart-job-placement-system.vercel.app
+## 📌 Overview
 
-### 🔗 Backend API
-https://smart-job-placement-api.onrender.com
+The **Smart Job Placement & Recruitment Management System** is built using React.js and Node.js to provide a centralized platform for managing placement activities.
 
-### 🔗 GitHub Repository
-https://github.com/Lanashree07/SmartJobPlacementSystem
+It helps students discover suitable job opportunities, apply for positions, and track their applications while enabling recruiters and administrators to manage recruitment-related activities efficiently.
 
----
+## ✨ Key Features
 
-## 📌 Project Overview
-
-The **Smart Job Placement & Recruitment Management System** is a full-stack recruitment management application designed to simplify the process of managing candidates, job openings, interviews, and successful placements.
-
-The system provides a centralized dashboard where recruitment information can be viewed and updated manually through an interactive web interface.
-
-The frontend is developed using **React + Vite**, while the backend is powered by **Node.js + Express** with **SQLite** for data storage.
-
----
-
-## ✨ Features
-
-- 📊 Recruitment dashboard
-- 👨‍💼 Candidate management
-- 💼 Job opportunity management
-- 🎯 Placement management
-- 📝 Manual candidate entry
-- 📝 Manual job entry
-- 📝 Manual placement entry
-- 📈 Candidate score tracking
-- 🔖 Candidate application status tracking
-- 🗓️ Interview information
-- 👥 Applicant count tracking
-- 💰 Salary and joining-date tracking
-- 💾 SQLite database storage
-- 🔗 REST API integration
-- 📱 Responsive dashboard interface
-- 🌐 Production deployment
-
----
+* 👨‍🎓 Student registration and profile management
+* 💼 Job listing and opportunity management
+* 📝 Online job application
+* 📊 Application status tracking
+* 🏢 Recruiter and company management
+* 👨‍💼 Admin dashboard
+* 🔍 Job search and filtering
+* 📋 Placement and recruitment management
+* 🔐 User authentication
+* 📱 Responsive user interface
 
 ## 🛠️ Tech Stack
 
 ### Frontend
 
-- React.js
-- Vite
-- JavaScript
-- HTML5
-- CSS3
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Vite
 
 ### Backend
 
-- Node.js
-- Express.js
-- REST API
-- CORS
+* Node.js
+* Express.js
+* REST API
 
 ### Database
 
-- SQLite
-- Better-SQLite3
+* SQLite
 
-### Development Tools
+### Tools
 
-- Visual Studio Code
-- Git
-- GitHub
-- npm
-
-### Deployment
-
-- Vercel – Frontend
-- Render – Backend
-
----
+* Git
+* GitHub
+* Visual Studio Code
+* npm
 
 ## 📂 Project Structure
 
+```text
 SmartJobPlacementSystem/
 │
 ├── client/
@@ -93,7 +64,6 @@ SmartJobPlacementSystem/
 │   │   ├── App.jsx
 │   │   ├── main.jsx
 │   │   └── styles.css
-│   │
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
@@ -107,333 +77,122 @@ SmartJobPlacementSystem/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
----
+## ⚙️ Installation & Setup
 
-### ⚙️ Getting Started
+### 1. Clone the Repository
 
-Clone the Repository
-
+```bash
 git clone https://github.com/Lanashree07/SmartJobPlacementSystem.git
-
-Move into the project directory:
-
 cd SmartJobPlacementSystem
+```
 
----
-
-### 🖥️ Backend Setup
-
-Move into the server directory:
-
-cd server
-
-Install the backend dependencies:
-
-npm install
-
-Start the backend server:
-
-npm start
-
-The backend will run at:
-
-http://localhost:5001
-
-The API base URL is:
-
-http://localhost:5001/api
-
----
-
-### 💻 Frontend Setup
-
-Open a new terminal.
-
-Move into the client directory:
-
-cd client
+### 2. Install Dependencies
 
 Install frontend dependencies:
 
+```bash
+cd client
 npm install
+```
 
-Start the React development server:
+Install backend dependencies:
 
+```bash
+cd ../server
+npm install
+```
+
+### 3. Start the Backend
+
+```bash
+cd server
+npm start
+```
+
+### 4. Start the Frontend
+
+Open another terminal:
+
+```bash
+cd client
 npm run dev
-
-The frontend will run at:
-
-http://localhost:5173
-
----
-
-### 📡 API Endpoints
-
-### Overview
-
-GET /api/overview
-
-Returns dashboard statistics such as:
-
-Total candidates
-Interviews scheduled
-Active jobs
-Placements
-Placement rate
-
----
-
-### Candidates
-
-Get all candidates:
-
-GET /api/candidates
-
-Add a candidate:
-
-POST /api/candidates
-
-Update a candidate:
-
-PUT /api/candidates/:id
-
-Delete a candidate:
-
-DELETE /api/candidates/:id
-
----
-
-### Jobs
-
-Get all jobs:
-
-GET /api/jobs
-
-Add a job:
-
-POST /api/jobs
-
----
-
-### Placements
-
-Get all placements:
-
-GET /api/placements
-
-Add a placement:
-
-POST /api/placements
-
----
-
-### 👨‍💼 Candidate Management
-
-The Candidate Pipeline allows users to manually enter and manage candidate information.
-
-Candidate Details
-
-Full Name
-Role
-Email
-Experience
-Candidate Score
-Application Status
-
-Available Statuses
-
-Applied
-Shortlisted
-Interviewing
-Offered
-
----
-
-### 💼 Job Management
-
-The Open Positions section allows users to manually add job opportunities.
-
-Job Details
-
-Job Title
-Company
-Location
-Employment Type
-Number of Applicants
-Filled/Open Status
-
----
-
-### 🎯 Placement Management
-
-The Successful Placements section allows users to manually record candidates who have been placed.
-
-Placement Details
-
-Candidate Name
-Role
-Company
-Salary
-Start Date
-
----
-
-### 📊 Dashboard
-
-The dashboard provides an overview of recruitment activity.
-
-Dashboard Statistics
-
-Total Candidates
-Interviews Scheduled
-Active Jobs
-Placements
-Placement Rate
-
-The dashboard also displays:
-
-Candidate Pipeline
-Open Positions
-Successful Placements
-
----
-
-### 🔄 Application Architecture
-
-                    ┌────────────────────────────┐
-                    │          Vercel            │
-                    │                            │
-                    │     React + Vite           │
-                    │       Frontend             │
-                    └─────────────┬──────────────┘
-                                  │
-                                  │ REST API
-                                  ▼
-                    ┌────────────────────────────┐
-                    │          Render            │
-                    │                            │
-                    │    Node.js + Express       │
-                    │        Backend             │
-                    └─────────────┬──────────────┘
-                                  │
-                                  │
-                                  ▼
-                    ┌────────────────────────────┐
-                    │          SQLite            │
-                    │         Database            │
-                    └────────────────────────────┘
-
----                    
-
-### 🌐 Deployment
-
-Frontend Deployment
-
-The React + Vite frontend is deployed using Vercel.
-
-Live application:
-
-https://smart-job-placement-system.vercel.app
-
-Backend Deployment
-
-The Node.js + Express backend is deployed using Render.
-
-Backend API:
-
-https://smart-job-placement-api.onrender.com
-
----
-
-### 🔗 Important Links
-
-| Resource             | Link                                                                              |
-| -------------------- | --------------------------------------------------------------------------------- |
-| 🌐 Live Application  | [Smart Job Placement System](https://smart-job-placement-system.vercel.app)       |
-| ⚙️ Backend API       | [Smart Job Placement API](https://smart-job-placement-api.onrender.com)           |
-| 💻 GitHub Repository | [SmartJobPlacementSystem](https://github.com/Lanashree07/SmartJobPlacementSystem) |
-| 👩‍💻 GitHub Profile | [Lanashree07](https://github.com/Lanashree07)                                     |
-| 💼 LinkedIn Profile  | [Lana Shree Ganesan](https://www.linkedin.com/in/lana-shree-ganesan/)             |
-
-
----
-
-### 📋 Example Workflow
-
-Open Smart Job Placement System
-              ↓
-View Recruitment Dashboard
-              ↓
-Add Candidate Details
-              ↓
-Track Candidate Status & Score
-              ↓
-Add Available Job Opportunities
-              ↓
-Track Applicants
-              ↓
-Add Successful Placement Details
-              ↓
-View Placement Information
-
----
-
-### 🔐 Data Management
-
-The backend uses SQLite with Better-SQLite3 to store:
-
-Candidates
-Jobs
-Placements
-
-The Express server exposes REST API endpoints that allow the React frontend to communicate with the database.
-
----
-
-### 📱 Responsive Design
-
-The application includes a responsive dashboard layout that adapts to different screen sizes.
-
-It supports:
-
-Desktop screens
-Laptop screens
-Tablet screens
-Mobile-sized screens
-
----
-
-### 🚀 Production URLs
-
-| Service     | URL                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------- |
-| 🌐 Frontend | [https://smart-job-placement-system.vercel.app](https://smart-job-placement-system.vercel.app) |
-| ⚙️ Backend  | [https://smart-job-placement-api.onrender.com](https://smart-job-placement-api.onrender.com)   |
-
-
----
-
-### 👩‍💻 Author
-
-Lana Shree Ganesan
-
-GitHub
-
-https://github.com/Lanashree07
-
-LinkedIn
-
-https://www.linkedin.com/in/lana-shree-ganesan/
-
----
-
-### ⭐ Project
+```
+
+The application will be available through the Vite development server.
+
+## 🔌 API Endpoints
+
+| Method | Endpoint                | Description               |
+| ------ | ----------------------- | ------------------------- |
+| GET    | `/api/jobs`             | Retrieve available jobs   |
+| POST   | `/api/jobs`             | Add a new job             |
+| GET    | `/api/applications`     | Retrieve applications     |
+| POST   | `/api/applications`     | Submit an application     |
+| PUT    | `/api/applications/:id` | Update application status |
+| DELETE | `/api/jobs/:id`         | Delete a job              |
+
+## 🧩 Main Modules
+
+### 👨‍🎓 Student Module
+
+* Student registration
+* Profile management
+* Browse job opportunities
+* Apply for jobs
+* Track application status
+
+### 🏢 Recruiter Module
+
+* Manage company information
+* Create job postings
+* View applications
+* Update recruitment status
+
+### 👨‍💼 Admin Module
+
+* Manage students and recruiters
+* Manage job postings
+* Monitor applications
+* Manage placement records
+
+## 🔄 Application Workflow
+
+```text
+Student Registration
+        ↓
+Create Profile
+        ↓
+Browse Job Opportunities
+        ↓
+Apply for Job
+        ↓
+Application Review
+        ↓
+Selection / Rejection
+        ↓
+Placement Record
+```
+
+## 🚀 Future Enhancements
+
+* AI-based job recommendations
+* Resume parsing and analysis
+* Skill-based job matching
+* Automated interview scheduling
+* Email notifications
+* Advanced analytics dashboard
+* Role-based authentication
+* Cloud database integration
+
+## 👩‍💻 Author
+
+**Lana Shree Ganesan**
+
+* GitHub: https://github.com/Lanashree07
+* LinkedIn: https://linkedin.com/in/lana-shree-ganesan
+
+## ⭐ Project
 
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
-
----
-
-### 📄 License
-
-This project is created for educational and portfolio purposes.
