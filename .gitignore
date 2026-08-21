@@ -8,3 +8,7 @@ npm-debug.log*
 *.db-wal
 .env
 .vercel/
+spring-server/target/
+.vscode/
+apache-maven-3.9.6/
+maven.zip
